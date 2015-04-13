@@ -1,9 +1,7 @@
 var ua = navigator.userAgent;
 var fsEnabled = native('fullscreenEnabled');
-var IS_ANDROID_CHROME = ua.indexOf('Android') !== -1 && ua.indexOf('Chrome') !== -1; 
-var IS_NATIVELY_SUPPORTED = 
-		!IS_ANDROID_CHROME &&
-		 defined(native('fullscreenElement')) && 
+var IS_NATIVELY_SUPPORTED =
+		 defined(native('fullscreenElement')) &&
 		(!defined(fsEnabled) || fsEnabled === true);
 
 var version = $.fn.jquery.split('.');
